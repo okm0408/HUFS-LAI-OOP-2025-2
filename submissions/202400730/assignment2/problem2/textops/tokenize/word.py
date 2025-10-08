@@ -4,6 +4,11 @@ def word_tokens(s: str) -> list[str]:
     Assume `s` is already normalized by clean_text.
     """
     
+    if not s or s.strip() == "":
+        
+        return []
+
+    
     return s.split(" ")
 
 
@@ -13,7 +18,7 @@ if __name__ == "__main__":
         assert word_tokens("") == []
         assert word_tokens(" ") == []
         assert word_tokens("single") == ["single"]
+        print("word.py tests passed. 🎉")
         
-        print("word.py tests passed.")
     run_tests()
-    # pass
+    pass
